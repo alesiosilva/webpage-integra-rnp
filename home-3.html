@@ -69,33 +69,23 @@
 </div>
 <div class="Conteiner-Equipes" id="xx-2-contar" data-aos="fade-right" >
     <div class="Equipes" id="Equi" onclick="showModal('popup-1')">
-        <a href="#">
-            <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056524/noc_gqh65q.png">
-        </a>
+        <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056524/noc_gqh65q.png">
         <p>Network Operations Center</p>
     </div>
     <div class="Equipes" id="Equi" onclick="showModal('popup-2')">
-        <a href="#">
-            <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056525/infra-pops_b4rmxu.png">
-        </a>
+        <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056525/infra-pops_b4rmxu.png">
         <p>Infraestrutura de POP</p>
     </div>
     <div class="Equipes" id="Equi" onclick="showModal('popup-3')">
-        <a href="#">
-            <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056523/idc_wridmu.png">
-        </a>
+        <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056523/idc_wridmu.png">
         <p>Internet Data Center</p>
     </div>
     <div class="Equipes" id="Equi" onclick="showModal('popup-4')">
-        <a href="#">
-            <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056522/cdc_pasvap.png">
-        </a>
+        <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056522/cdc_pasvap.png">
         <p>Container Data Center</p>
     </div>
     <div class="Equipes" id="Equi" onclick="showModal('popup-5')">
-        <a href="#">
-            <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056525/solutions_mon0ju.png">
-        </a>
+        <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056525/solutions_mon0ju.png">
         <p>Soluções</p>
     </div>
 </div> 
@@ -316,7 +306,7 @@ h3 {
     font-weight: bold;
 }
 
-/*---Banner1---*/
+/*---Banner---*/
 
 .Ban {
     margin-top: -40px;
@@ -369,22 +359,6 @@ h3 {
 
 /*---Equipes e Serviços---*/ 
 
-.Equipes, .Services {  
-    transition: 0.1s; 
-    border: 0;
-    border-radius: 20px;
-}
-
-.Equipes:hover {
-    transform: scale(1.1); 
-    box-shadow: -1rem 0 3rem rgb(209, 209, 209);
-}
-
-.Services:hover {
-    transform: scale(1.1); 
-    box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.2);
-}
-
 .text-section {
     background-color: #fff;
     text-align: left;
@@ -426,15 +400,32 @@ h3 {
     height: 30vh;
 }
 
-#Sec{
-    width: 80px;
-}
-
 .Conteiner-Services > div {
     text-align: center;
     padding: 10px 0;
     font-size: 10px;
     color: #ffff;
+}
+
+.Equipes, .Services {  
+    transition: 0.1s; 
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Equipes:hover {
+    transform: scale(1.1); 
+    box-shadow: -1rem 0 3rem rgb(209, 209, 209);
+}
+
+.Services:hover {
+    transform: scale(1.1); 
+    box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.2);
+}
+
+#Sec{
+    width: 80px;
 }
 
 /*---MODAL POPUP---*/
