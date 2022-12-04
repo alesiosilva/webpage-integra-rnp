@@ -400,8 +400,6 @@ h3 {
     display: inline-block;
     top: 45px;
     left: 20px;
-    transition: .2s;
-    transition-timing-function: ease-out;
 }
 
 /* Dropdown button with animation */
@@ -425,7 +423,6 @@ h3 {
 
 /* Dropdown Sub-Menu Content (Hidden by Default) */
 .dropdown-content, .sub-menu-content{
-    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -435,14 +432,17 @@ h3 {
     border-radius: 5px;
     rotate: x -90deg;
     opacity: .5;
-    transition: .2s;
+    transition-duration: .15s;
+    transition-timing-function: ease-out;
 }
 
 /* Sub-menu com posição relativa ao ancestral */
 .sub-menu {
     position: relative;
-    transition: .2s;
-    transition-timing-function: ease-out;
+}
+
+.sub-menu-content {
+    left: 160px;   
 }
 
 /* Show the dropdown menu on hover */
@@ -454,7 +454,6 @@ h3 {
 
 .sub-menu:hover .sub-menu-content {
     display: grid;
-    left: 160px;
     top: 0px;
     rotate: x 0deg;
     opacity: 1;
@@ -663,9 +662,9 @@ h3 {
 }
 
 @keyframes modal {
-    fron{
+    from{
         opacity: 0;
-        transform: translate3d(0, -60px, 0);
+        transform: translate3d(0, -120px, 0);
     }
     to {
         opacity: 1;
@@ -674,7 +673,7 @@ h3 {
 }
 
 .modal-container.show .modal-popup {
-    animation: modal .3s;
+    animation: modal .2s;
 }
 
 /* flickity.css SLIDER */
