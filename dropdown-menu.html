@@ -1,0 +1,113 @@
+<html> 
+<div class="Ban">
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <div class="sub-menu">
+                <a href="https://integra.rnp.br/display/DATI/NOC+-+Network+Operation+Center">NOC</a>
+                <div class="sub-menu-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="sub-menu">
+                <a href="https://integra.rnp.br/display/DATI/Infraestrutura+de+POP%27s">Infra-POP</a>
+                <div class="sub-menu-content">
+                    <a href="#">Link 4</a>
+                    <a href="#">Link 5</a>
+                    <a href="#">Link 6</a>
+                </div>
+            </div>
+            <div class="sub-menu">
+                <a href="https://integra.rnp.br/display/DATI/Data+Center+-+Brasilia">IDC</a>
+                <div class="sub-menu-content">
+                    <a href="#">Link 7</a>
+                    <a href="#">Link 8</a>
+                    <a href="#">Link 9</a>
+                </div>
+            </div>
+            <div class="sub-menu">
+                <a href="https://integra.rnp.br/display/DATI/Data+Center+-+Recife">CDC</a>
+                <div class="sub-menu-content">
+                    <a href="#">Link 10</a>
+                    <a href="#">Link 11</a>
+                    <a href="#">Link 12</a>
+                </div>
+            </div>
+            <div class="sub-menu">
+                <a href="https://integra.rnp.br/display/DATI/NOC+-+Projetos">Soluções</a>
+                <div class="sub-menu-content">
+                    <a href="#">Link 13</a>
+                    <a href="#">Link 14</a>
+                    <a href="#">Link 15</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
+<style>
+    /*----Dropdown----*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    background-size: cover;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content, .sub-menu-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.sub-menu {
+    position: relative;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover, .sub-menu-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sub-menu:hover .sub-menu-content {
+    display: grid;
+    left: 160px;
+    top: 0px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+</style>
