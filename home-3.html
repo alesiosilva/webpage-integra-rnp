@@ -95,7 +95,7 @@
     <h3>Áreas da Coordenação</h3>
     <div class="underline"></div>
 </div>
-<d  iv class="Conteiner-Equipes" id="xx-2-contar" data-aos="fade-right" >
+<div class="Conteiner-Equipes" id="xx-2-contar" data-aos="fade-right" >
     <div class="Equipes" id="Equi" onclick="showModal('popup-1')">
         <img id="Sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1669056524/noc_gqh65q.png">
         <p>Network Operations Center</p>
@@ -369,12 +369,26 @@ Volumetria Operacional - Foi realizado a migração da Volumetria Operacional do
 <br><br>
 
 <style>
-/* Cores: 
-    Azul: #0015AF
-    Roxo: #3C0064
-    Laranja: #FF5A4C
-    Verde: #00E637
-*/
+:colors{ 
+    /* CORES FORTES - NOVA MARCA */
+    --azul: #0015af;
+    --roxo: #3c0064;
+    --laranja: #ff5a4c;
+    --verde: #00e637;
+
+    /* DASHBOARDS */
+    --azul-background: #124d97;
+    --verde-escuro: #13678a;
+    --verde-medio: #45c4b0;
+    --verde-claro: #9aeba3;
+    --amarelo-limao: #dafdba;
+    
+    /* DETALHES, FONTES E ALERTAS */
+    --cinza: rgb(83, 106, 131);
+    --verde-forte: #50c850; 
+    --laranja-claro: #e0855a;
+    --vermelho: #B82218;
+}
 
 #xx-2-contar{
     margin: 0 auto;
@@ -499,11 +513,12 @@ h3 {
 .Conteinbaner{
     display: flex;
     padding-top: 2%;
-    justify-content: center;
-    background-image: url('https://res.cloudinary.com/dintndhgm/image/upload/v1669240081/banner-roxo_ykubef.png');
+    justify-content: center;/*
+    background-image: url('https://res.cloudinary.com/dintndhgm/image/upload/v1669240081/banner-roxo_ykubef.png'); 
     background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+    background-repeat: no-repeat;*/
+    background: rgb(60,0,70);
+    background: linear-gradient(90deg, rgba(60,0,70,1) 0%, rgba(90,40,120,1) 70%);
     height: 33vh;
     color: #ffff;
     align-items: center;
@@ -519,7 +534,6 @@ h3 {
     font-size: 28px;
     border-left: 8px #00E637 solid;
     padding: 10px;
-    background-color: rgba(60,0,100,0.9);
     border-radius: 8px;
 }
 
@@ -571,7 +585,7 @@ h3 {
 }
 
 .Conteiner-Services{
-    background-color: rgba(60,0,100,0.9);
+    background-color: rgba(60,0,100, 0.85);
     display: grid;
     width:100%;
     justify-content: center;
