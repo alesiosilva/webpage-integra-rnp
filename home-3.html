@@ -368,6 +368,25 @@ Volumetria Operacional - Foi realizado a migração da Volumetria Operacional do
 </div>
 <br><br>
 
+<!--Botão chat-->
+<div class="chat" onclick="this.classList.toggle('active')">
+    <div class="background"></div>
+    
+    <a href="https://teams.microsoft.com/l/app/f6405520-7907-4464-8f6e-9889e2fb7d8f?templateInstanceId=da85eda1-5076-4db1-a432-6fb771818b95&environment=5e512c05-c4fd-e14f-a4fa-9e671a15ade5" class="">
+        <svg class="chat-bubble" width="100" height="100" viewBox="0 0 100 100">
+            
+            <g class="bubble">
+                <path class="line line1" d="M 30.7873,85.113394 30.7873,46.556405 C 30.7873,41.101961 36.826342,35.342 40.898074,35.342 H 59.113981 C 63.73287,35.342 69.29995,40.103201 69.29995,46.784744" />
+                <path class="line line2" d="M 13.461999,65.039335 H 58.028684 C 63.483128,65.039335 69.243089,59.000293 69.243089,54.928561 V 45.605853 C 69.243089,40.986964 65.02087,35.419884 58.339327,35.419884" />
+            </g>
+            <circle class="circle circle1" r="1.9" cy="50.7" cx="42.5" />
+            <circle class="circle circle2" cx="49.9" cy="50.7" r="1.9" />
+            <circle class="circle circle3" r="1.9" cy="50.7" cx="57.3" />
+            
+        </svg>
+    </a>
+</div>
+
 <style>
 :colors{ 
     /* CORES FORTES - NOVA MARCA */
@@ -377,13 +396,14 @@ Volumetria Operacional - Foi realizado a migração da Volumetria Operacional do
     --verde: #00e637;
 
     /* DASHBOARDS */
-    --azul-background: #124d97;
+    --azul-background-1: #124d97;
     --verde-escuro: #13678a;
     --verde-medio: #45c4b0;
     --verde-claro: #9aeba3;
     --amarelo-limao: #dafdba;
     
     /* DETALHES, FONTES E ALERTAS */
+    --azul-background-2: #1B539D;
     --cinza: rgb(83, 106, 131);
     --verde-forte: #50c850; 
     --laranja-claro: #e0855a;
@@ -517,7 +537,7 @@ h3 {
     background-image: url('https://res.cloudinary.com/dintndhgm/image/upload/v1669240081/banner-roxo_ykubef.png'); 
     background-size: cover;
     background-repeat: no-repeat;*/
-    background: rgb(60,0,70);
+    background: #3c0046;
     background: linear-gradient(90deg, rgba(60,0,70,1) 0%, rgba(90,40,120,1) 70%);
     height: 33vh;
     color: #ffff;
@@ -585,7 +605,7 @@ h3 {
 }
 
 .Conteiner-Services{
-    background-color: rgba(60,0,100, 0.85);
+    background-color: rgba(60, 0, 100, 0.85);
     display: grid;
     width:100%;
     justify-content: center;
@@ -782,7 +802,82 @@ h3 {
 	width: 88%;
 	margin: 0 auto;
 }
- 
+
+/* WEBCHAT */
+
+.chat {
+
+	display: flex;
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+
+}
+
+.background {
+
+  background-color: #3c0064;
+  border-radius: 50%;
+  box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044), 0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061), 0 25px 20px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 80px;
+
+}
+
+.chat-bubble {
+
+  cursor: pointer;
+  position: relative;
+}
+
+.bubble {
+
+  transform-origin: 50%;
+  transition: transform 500ms cubic-bezier(0.17, 0.61, 0.54, 0.9);
+
+}
+
+.line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.75;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 90;
+  stroke-dashoffset: -20;
+}
+
+.line2 {
+  stroke-dasharray: 67 87;
+  stroke-dashoffset: -18;
+}
+
+.circle {
+  fill: #ffffff;
+  stroke: none;
+  transform-origin: 50%;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*
+.active .bubble {
+  transform: translateX(24px) translateY(4px) rotate(45deg);
+}
+.active .line1 {
+  stroke-dashoffset: 21;
+}
+.active .line2 {
+  stroke-dashoffset: 30;
+}
+.active .circle {
+  transform: scale(0);
+}*/
+
 </style>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
