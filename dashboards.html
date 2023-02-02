@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards</title>
+</head>
+<body>
+    <div class="container">
+        <div class="button" onclick="showModal('dash-1')">
+            <img id="sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1675349215/volumetria_tpjzhw.png">
+            <p>Volumetria Operacional de Atendimento</p>
+        </div>
+        <div class="button" onclick="showModal('dash-2')">
+            <img id="sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1675349214/circuitos-backbone_wwmlim.png">
+            <p>Disponibilidade Circuitos Backbone</p>
+        </div>
+        <div class="button" onclick="showModal('dash-3')">
+            <img id="sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1675349215/servicos-dispon_nzc9cr.png">
+            <p>Disponibilidade - Serviços de TI</p>
+        </div>
+        <div class="button" onclick="showModal('dash-4')">
+            <img id="sec" src="https://res.cloudinary.com/dintndhgm/image/upload/v1675349214/servicos-status_mynjoh.png">
+            <p>Status Report - Serviços de TI</p>
+        </div>
+    </div>  
+    <iframe id="dash-1" title="Volumetria Operacional" width="100vw" height="800" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiNTQzOGE4Y2MtODRjNy00YTdkLThkN2ItNTI1MzcwNWQwMTY4IiwidCI6ImQ2NDY0NmU2LWUwZDctNGY4NS1iNDQzLTYxNzBkZmVjMGFmNCJ9&pageName=ReportSection1f11949885ec55e97b32" 
+    frameborder="0" allowFullScreen="true"></iframe>
+
+    <iframe id="dash-2" title="Circuitos Backbone" width="100vw" height="800" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiN2EwZWRjZmUtNGQ4MS00NDZmLWI3ZmMtODgxN2JiN2I4NDI1IiwidCI6ImQ2NDY0NmU2LWUwZDctNGY4NS1iNDQzLTYxNzBkZmVjMGFmNCJ9" 
+    frameborder="0" allowFullScreen="true"></iframe>
+
+    <iframe id="dash-3" title="Disponibilidade Serviços de TI" width="100vw" height="800" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiNzA0MTM0MjktMThhZS00OTA1LTkwZjEtYTAyYzU3NTIwNGFlIiwidCI6ImQ2NDY0NmU2LWUwZDctNGY4NS1iNDQzLTYxNzBkZmVjMGFmNCJ9" 
+    frameborder="0" allowFullScreen="true"></iframe> 
+
+    <iframe id="dash-4" title="Status Report Serviços de TI" width="100vw" height="800" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiOGJhZjFmODAtNGE3Mi00M2NmLThiNjQtZmM0ZmY4ZmQ2YmE3IiwidCI6ImQ2NDY0NmU2LWUwZDctNGY4NS1iNDQzLTYxNzBkZmVjMGFmNCJ9" 
+    frameborder="0" allowFullScreen="true"></iframe> 
+</body>
+
+<style>
+    iframe {
+        display: none;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+    }
+
+    iframe.show{
+        display: flex;
+    }
+
+    .container{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+        grid-template-columns: 240px 240px 240px 240px;
+        padding: 10px;
+    }
+
+    .container > div {
+        text-align: center;
+        display: flex;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .container > div > p {
+        padding-left: 10px;
+    }
+
+    .button {  
+        transition: 0.1s; 
+        border: 0;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        transform: scale(1.05); 
+        box-shadow: -1rem 0 3rem rgb(209, 209, 209);
+    }
+
+    #sec{
+        width: 50px;
+        height: 50px;
+    } 
+</style>
+<script>
+    function showModal(modalID) {
+        closeOpenedModal(modalID);
+        const modal = document.getElementById(modalID);
+        if(modal){
+            modal.classList.add('show');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == modalID 
+                || e.target.className == 'close') {
+                    modal.classList.remove('show');
+                }
+            });
+        }
+    }
+
+    function closeOpenedModal(modalID) {
+        var modalOpened = document.getElementsByClassName('show')[0];
+        if(modalOpened){
+            modalOpened.classList.remove('show');
+        }
+    }
+
+</script>
+
+</html>
